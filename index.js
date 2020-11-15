@@ -18,6 +18,10 @@ app.use(noteRoutes);
 db.connect();
 
 
+app.get("/", (req, res) => {
+  res.send("YouNote API");
+});
+
 app.listen(port, () => {
   console.log(`Server is listening on http://localhost:${port}`);
 });
